@@ -1,5 +1,6 @@
 const express = require("express");
 const {createtodo} = require("/types");
+const {todo} = require("./db");
 const app = express();
 
 app.use(express.json());
@@ -14,9 +15,20 @@ app.post('/todo',function(req,res){
         return;
     }
 
+    await todo.create({
+        title: createPayload.title,
+        description: createPayload.description,
+        status: false
+    })
+
 })
 
 app.get("/todo",function(req,res){
+    const todos = await todo.find({});
+
+    res.json({
+        todos
+    })
 
 })
 
@@ -29,5 +41,10 @@ app.pust("/completed",function(req,res){
         })
         return ;
     }
+    await todo.update({
+        _id: req.body.id
+    },{
+        status: true
+    })
 
 })
