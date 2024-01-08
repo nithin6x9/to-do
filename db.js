@@ -10,3 +10,8 @@ const todoschema = mogoose.Schema({
 
 
 
+const todo = mongooose.model('To-Do',todoSchema);
+
+module.exports = {
+    todo
+}
