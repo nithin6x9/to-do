@@ -46,5 +46,8 @@ app.pust("/completed",function(req,res){
     },{
         status: true
     })
+    re.json({
+        msg:"ToDo marked as complete"
+    })
 
 })
