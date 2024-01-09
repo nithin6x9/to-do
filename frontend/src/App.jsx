@@ -7,7 +7,7 @@ function App() {
 
   return (
    <div>
-   hi there
+   <CreateTodo> </CreateTodo>
    </div>
   )
 }
