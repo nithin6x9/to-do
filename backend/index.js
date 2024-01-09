@@ -2,7 +2,7 @@ const express = require("express");
 const {createtodo} = require("/types");
 const {todo} = require("./db");
 const app = express();
-
+const cors = require("cors");
 app.use(express.json());
 
 app.post('/todo',function(req,res){
