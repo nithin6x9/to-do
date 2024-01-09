@@ -4,12 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import React from 'react'
 import {CreateTodo} from './components/CreateTodo'
+import {Todos} from './components/Todos'
+
+
 function App() {
 
   return (
    <div>
     <CreateTodo></CreateTodo>
-   hey there
+    <Todos></Todos>
+   
    </div>
   )
 }
