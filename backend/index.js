@@ -32,7 +32,7 @@ app.get("/todo",function(req,res){
 
 })
 
-app.pust("/completed",function(req,res){
+app.put("/completed",function(req,res){
     const updatePayload = req.body;
     const parsedPayload = updateTodo.safeParse(updatePayload);
     if(!parsedPayload.success){
